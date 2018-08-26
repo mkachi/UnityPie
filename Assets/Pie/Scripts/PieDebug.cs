@@ -9,7 +9,7 @@ using Object = UnityEngine.Object;
 
 public sealed class PieDebug
 {
-    private Debug() { }
+    private PieDebug() { }
 
     public static bool developerConsoleVisible
     {
