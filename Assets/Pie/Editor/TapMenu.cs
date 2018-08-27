@@ -183,10 +183,10 @@ namespace Pie.Editor
             AssetDatabase.Refresh();
         }
 
-        [MenuItem("Pie/Tools/AssetBundler")]
+        [MenuItem("Pie/Tools/AssetBundle Builder")]
         public static void Pie_Tools_AssetBundler()
         {
-            //BundleBuilder.ShowWindow();
+            BundleBuilder.ShowWindow();
         }
 
         [MenuItem("Pie/Tools/Script Cryptor")]
