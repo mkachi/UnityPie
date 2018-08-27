@@ -2,6 +2,7 @@
 using System.Security.Cryptography;
 using System.Reflection;
 using System;
+using Pie.Attributes;
 
 namespace Pie.Security
 {
@@ -12,7 +13,7 @@ namespace Pie.Security
         private string _key;
         [SerializeField]
         private string _iv;
-        [SerializeField]
+        [SerializeField, FormatOnly("csp")]
         private TextAsset _assembly;
 
         void Awake()

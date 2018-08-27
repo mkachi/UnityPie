@@ -7,7 +7,7 @@ using System;
 
 namespace Pie.Security
 {
-    public sealed class PiePrefs
+    public sealed class SecurityPrefs
     {
         private static string _key = string.Empty;
         public static string KEY
@@ -16,7 +16,7 @@ namespace Pie.Security
             {
                 if (_key.Equals(string.Empty) || _key.Equals(""))
                 {
-                    Debug.LogError("PiePrefs KEY is empty!");
+                    PieDebug.LogError("PiePrefs KEY is empty!");
                 }
                 return _key;
             }

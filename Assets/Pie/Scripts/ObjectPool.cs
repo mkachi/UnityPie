@@ -55,9 +55,13 @@ namespace Pie
 
         public GameObject Peek(bool active = true)
         {
-            GameObject result = _pools.Dequeue();
-            result.SetActive(active);
-            return result;
+            if (_pools.Count > 0)
+            {
+                GameObject result = _pools.Dequeue();
+                result.SetActive(active);
+                return result;
+            }
+            return null;
         }
     }
 }
