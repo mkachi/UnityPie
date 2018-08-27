@@ -2,7 +2,8 @@
 {
     using UnityEngine;
 
-    public sealed class FormatOnlyAttribute : PropertyAttribute
+    public sealed class FormatOnlyAttribute
+        : PropertyAttribute
     {
         public string Format { get; private set; }
 

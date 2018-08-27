@@ -11,4 +11,6 @@ public class Test
 {
     [FormatOnly("txt")]
     public TextAsset _formatOnly;
+    [AssetsOnly]
+    public Object _assetsOnly;
 }
