@@ -15,7 +15,7 @@ namespace Pie.Editor
             kit.transform.localPosition = Vector3.zero;
             kit.transform.localScale = Vector3.one;
 
-            GameObject camera = HierarchyAdder.Add("3D Camera", new Camera(), new GUILayer());
+            GameObject camera = HierarchyAdder.Add("3D Camera", new Camera());
             camera.transform.SetParent(kit.transform);
             camera.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
             camera.transform.localScale = Vector3.one;
@@ -194,10 +194,10 @@ namespace Pie.Editor
         {
         }
 
-        [MenuItem("Pie/Help")]
+        [MenuItem("Pie/About UnityPie")]
         public static void Pie_Help()
         {
-            MessageBox.Show("Pie", "Pie v0.1 (http://blog.naver.com/mkachi)", new Vector2(320, 70));
+            MessageBox.Show("UnityPie", "UnityPie v0.1 (http://blog.naver.com/mkachi)", new Vector2(320, 70));
         }
     }
 }
