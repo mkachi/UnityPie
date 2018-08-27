@@ -250,7 +250,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d3598bdfd4cf9a4788c004605a63287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _asset: {fileID: 0}
+  _formatOnly: {fileID: 0}
+  _assetsOnly: {fileID: 0}
+  _sceneObjectOnly: {fileID: 0}
 --- !u!4 &357716185
 Transform:
   m_ObjectHideFlags: 0

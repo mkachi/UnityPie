@@ -13,4 +13,6 @@ public class Test
     public TextAsset _formatOnly;
     [AssetsOnly]
     public Object _assetsOnly;
+    [SceneObjectOnly]
+    public Object _sceneObjectOnly;
 }

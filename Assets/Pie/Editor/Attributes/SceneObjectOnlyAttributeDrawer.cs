@@ -4,8 +4,8 @@ using Pie.Attributes;
 
 namespace Pie.Editor
 {
-    [CustomPropertyDrawer(typeof(AssetsOnlyAttribute))]
-    public class AssetsOnlyAttributeDrawer
+    [CustomPropertyDrawer(typeof(SceneObjectOnlyAttribute))]
+    public class SceneObjectOnlyAttributeDrawer
         : PropertyDrawer
     {
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
@@ -15,9 +15,9 @@ namespace Pie.Editor
                 var asset = property.objectReferenceValue;
                 if (!ReferenceEquals(asset, null))
                 {
-                    if (!AssetDatabase.Contains(asset))
+                    if (!GameObject.Find(asset.name))
                     {
-                        Debug.LogError(string.Format("{0} is not an asset!", asset.name));
+                        Debug.LogError(string.Format("{0} is not a scene object!", asset.name));
                         property.objectReferenceValue = null;
                     }
                 }
