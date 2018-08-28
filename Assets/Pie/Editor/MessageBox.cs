@@ -27,11 +27,13 @@ namespace Pie.Editor
 
         void OnGUI()
         {
-            EditorGUI.LabelField(new Rect(10, 10, 300, 17), text);
-            if (GUI.Button(new Rect(10, 35, 300, 17), "OK"))
+            EditorGUILayout.BeginVertical();
+            GUILayout.Label(text);
+            if (GUILayout.Button("OK"))
             {
                 Close();
             }
+            EditorGUILayout.EndVertical();
         }
     }
 }

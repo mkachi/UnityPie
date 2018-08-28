@@ -25,7 +25,7 @@ namespace Pie.Editor
                 {
                     string path = AssetDatabase.GetAssetPath(asset);
                     string format = path.Substring(path.LastIndexOf('.') + 1);
-                    if (_attribute.Format != format)
+                    if (_attribute.Format.ToLower() != format.ToLower())
                     {
                         Debug.LogError(string.Format("{0} is not a .{1} format!", asset.name, _attribute.Format));
                         property.objectReferenceValue = null;

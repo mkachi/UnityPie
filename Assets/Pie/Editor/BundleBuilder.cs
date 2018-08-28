@@ -12,7 +12,7 @@ namespace Pie.Editor
         private string _path;
         private BuildTarget _target = BuildTarget.NoTarget;
 
-        static public void ShowWindow()
+        public static void ShowWindow()
         {
             if (_instance == null)
             {

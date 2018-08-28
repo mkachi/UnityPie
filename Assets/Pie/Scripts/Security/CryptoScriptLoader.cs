@@ -13,7 +13,7 @@ namespace Pie.Security
         private string _key;
         [SerializeField]
         private string _iv;
-        [SerializeField, FormatOnly("csp")]
+        [SerializeField]
         private TextAsset _assembly;
 
         void Awake()
@@ -29,7 +29,7 @@ namespace Pie.Security
             byte[] decrypted = xTrans.TransformFinalBlock(buffer, 0, buffer.Length);
 
             Assembly asm = Assembly.Load(decrypted);
-            string typeName = _assembly.name.Replace(".csp", "");
+            string typeName = _assembly.name.Replace(".txt", "");
             Type encryptClass = asm.GetType(typeName);
 
             gameObject.AddComponent(encryptClass);

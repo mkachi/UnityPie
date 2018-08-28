@@ -136,6 +136,18 @@ namespace Pie.Editor
             }
         }
 
+        [MenuItem("Pie/Tools/AssetBundle Builder")]
+        public static void Pie_Tools_AssetBundler()
+        {
+            BundleBuilder.ShowWindow();
+        }
+
+        [MenuItem("Pie/Tools/Script Encrypter")]
+        public static void Pie_Tools_ScriptEncrypter()
+        {
+            ScriptEncrypter.ShowWindow();
+        }
+
         [MenuItem("Pie/Basic Folder %&e")]
         public static void Pie_BasicFolder()
         {
@@ -181,17 +193,6 @@ namespace Pie.Editor
 
             EditorApplication.update();
             AssetDatabase.Refresh();
-        }
-
-        [MenuItem("Pie/Tools/AssetBundle Builder")]
-        public static void Pie_Tools_AssetBundler()
-        {
-            BundleBuilder.ShowWindow();
-        }
-
-        [MenuItem("Pie/Tools/Script Cryptor")]
-        public static void Pie_Tools_ScriptCrytor()
-        {
         }
 
         [MenuItem("Pie/About UnityPie")]
