@@ -6,7 +6,7 @@
 * [Security](Security.html)
     * CryptoScriptLoader
     * SecurityPrefs
-* [SecureTypes](Types.html)
+* [Secure Types](Types.html)
 * [ObjectPool](ObjectPool.html)
     * PoolItem
 * [PieDebug](PieDebug.html)
