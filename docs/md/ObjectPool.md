@@ -51,4 +51,11 @@ Get the useable objects.
 |---------|--------------------------------------------|
 | active | Whether the imported object is active |
   
+#### MaxSize
+``` cs
+public int MaxSize { get; private set; }
+```
+**Description**  
+Pool size  
+  
 ##### [Back](index.html)
