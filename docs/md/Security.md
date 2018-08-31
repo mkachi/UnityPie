@@ -7,7 +7,7 @@ Invoke a script encrypted with openSSL.
 Enter Key and IV and put your encrypted script.  
 The encrypted dll must be in the Assets Folder.  
   
-Encryption is possible with the [ScriptEncrypter](Tools.html) included in the library.  
+Encryption is possible with the `ScriptEncrypter` included in the library.  
 #### SecurityPrefs
 ``` cs
 SecurityPrefs.SetInt("Sample", 999);

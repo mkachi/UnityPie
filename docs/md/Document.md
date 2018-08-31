@@ -13,6 +13,6 @@
     Enabled only in debug mode.  
 * [ResourceLoader](ResourceLoader.html)
 * [StringMaker](StringMaker.html)
-* [Tools](Tools.html)
+* Tools
     * AssetBundle Builder
     * Script Encrypter
