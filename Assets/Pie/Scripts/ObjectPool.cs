@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using UnityEngine;
+using System.Collections.Generic;
 using System.Text;
-using UnityEngine;
 
 namespace Pie
 {
@@ -13,17 +13,19 @@ namespace Pie
         {
             MaxSize = size;
             _pools = new Queue<GameObject>();
+#if UNITY_EDITOR
             StringBuilder sb = new StringBuilder();
+#endif
             for (int i = 0; i < size; ++i)
             {
                 GameObject item = GameObject.Instantiate(prefab) as GameObject;
                 item.SetActive(false);
                 item.AddComponent<PoolItem>().SetPool(this);
-
+#if UNITY_EDITOR
                 sb.Remove(0, sb.Length);
-                sb.Append(item.name).Append(" [Pool : ").Append(i).Append("]");
-                item.name = sb.ToString();
-
+                sb.Append("[Pool : ").Append(i).Append("]");
+                item.name = item.name.Replace("(clone)", sb.ToString());
+#endif
                 _pools.Enqueue(item);
             }
         }
@@ -32,18 +34,20 @@ namespace Pie
         {
             MaxSize = size;
             _pools = new Queue<GameObject>();
+#if UNITY_EDITOR
             StringBuilder sb = new StringBuilder();
-            for (int i = 0;  i < size; ++i)
+#endif
+            for (int i = 0; i < size; ++i)
             {
                 GameObject item = GameObject.Instantiate(prefab) as GameObject;
                 item.SetActive(false);
                 item.AddComponent<PoolItem>().SetPool(this);
                 item.transform.SetParent(parent);
-
+#if UNITY_EDITOR
                 sb.Remove(0, sb.Length);
-                sb.Append(item.name).Append(" [Pool : ").Append(i).Append("]");
-                item.name = sb.ToString();
-
+                sb.Append("[Pool : ").Append(i).Append("]");
+                item.name = item.name.Replace("(clone)", sb.ToString());
+#endif
                 _pools.Enqueue(item);
             }
         }

@@ -119,11 +119,20 @@ namespace Pie
             return utile;
         }
 
-        public static string[] Split(string str, params string[] separator, System.StringSplitOptions option = System.StringSplitOptions.RemoveEmptyEntries)
+        public static string[] Split(string str, params string[] separator)
+        {
+            return str.Split(separator, System.StringSplitOptions.RemoveEmptyEntries);
+        }
+        public static string[] Split(string str, System.StringSplitOptions option, params string[] separator)
         {
             return str.Split(separator, option);
         }
-        public static char[] Split(string str, params char[] separator, System.StringSplitOptions option = System.StringSplitOptions.RemoveEmptyEntries)
+
+        public static string[] Split(string str, params char[] separator)
+        {
+            return str.Split(separator, System.StringSplitOptions.RemoveEmptyEntries);
+        }
+        public static string[] Split(string str, System.StringSplitOptions option, params char[] separator)
         {
             return str.Split(separator, option);
         }
